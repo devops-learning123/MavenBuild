@@ -12,8 +12,8 @@
 
     - name: deploy code
       copy:
-        src: java-example.war
-        dest: /var/lib/tomcat9/webapps/java-example.war
+        src: spock-example-1.0-SNAPSHOT.jar
+        dest: /var/lib/tomcat9/webapps/spock-example-1.0-SNAPSHOT.jar
 
     - name: Restart Tomcat Service
       service:
