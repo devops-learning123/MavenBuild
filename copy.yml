@@ -6,8 +6,8 @@
         name: permissions
         path: /var/lib/tomcat9/conf/webapps
         mode: 0777
-        state: present
-        
+        state: directory
+
     - name: deploy code
       copy:
         src: java-example.war
