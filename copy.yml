@@ -1,11 +1,13 @@
 ---
 - hosts: all
+  become: yes 
+
   tasks:
     - name: change permissions
       file:
-        name: permissions
-        path: /var/lib/tomcat9/conf/webapps
+        path: /var/lib/tomcat9
         mode: 0777
+        recurse: yes
         state: directory
 
     - name: deploy code
